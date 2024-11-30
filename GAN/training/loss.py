@@ -166,7 +166,7 @@ class StyleGAN2Loss(Loss):
                     # Compute the squared gradient norm
                     temp = r1_grads.pow(2).sum(dim=list(range(1, r1_grads.ndim))) # except the first dimension
                     # R1 regularization loss
-                    loss_Dr1 = (self.r1_gamma / 2) * r1_grads_norm.mean() # This the is the final R1 regulatization value
+                    loss_Dr1 = (self.r1_gamma / 2) * temp.mean() # This the is the final R1 regulatization value
                     ##################################################################################################################################
 
 

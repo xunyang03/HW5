@@ -373,7 +373,7 @@ def main():
 
             # Multiply grad_ with loss_weights at the timestep t (Hint: use breakpoint to check loss_weights data structure)
             #grad_ = None
-            grad_ = (loss_weight(t) * grad_).mean()
+            grad_ = (loss_weights[t] * grad_).mean()
             ############################################ End Your Code Here ##############################################
 
 
